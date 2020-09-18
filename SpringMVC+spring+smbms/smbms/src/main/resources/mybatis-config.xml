@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <!--    为实体类定义别名：也就是设置mapper的映射文件中的实体类可以不指包名了-->
+    <typeAliases>
+        <package name="cn.smbms.pojo"/>
+    </typeAliases>
+</configuration>

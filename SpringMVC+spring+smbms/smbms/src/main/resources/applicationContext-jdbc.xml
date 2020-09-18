@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+    <!--bean注入-->
+    <!--<bean name="别名并唯一标识" class="实体类的全限定类名">
+        <property name="属性名" value="要设置的属性值"/>
+    </bean>-->
+
+    <context:component-scan base-package="cn.smbms.dao,cn.smbms.service"/>
+
+</beans>

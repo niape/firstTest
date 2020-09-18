@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+        namespace: 对应dao接口的全限定名（包名+类名）,相当于在这个文档中实现了dao接口
+    -->
+<mapper namespace="cn.smbms.dao.user.UserMapper">
+    <!--
+    这里面写的是sql语句(用标签的形式写的)
+    sql:   <select> <insert> <update> <delete>
+        id ： 指的是dao方法中的方法名
+        parameterType : 参数的类型（没有参数或者多于一个参数并且参数类型不一样，可以不指定）
+            对于多参的类型指定："@Param("name") String name,@Param("password") String password)"
+            对于一个参数或一类参数的类型的指定："java.lang.String"等
+        resultType : 返回值的类型的全限定类名
+-->
+    <select id="getLoginUser" resultType="cn.smbms.pojo.User">
+        select * from smbms_user where userCode=#{userCode}
+    </select>
+
+
+</mapper>
